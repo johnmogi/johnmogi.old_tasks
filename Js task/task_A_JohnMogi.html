@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript html 5 Task_A - John Mogi</title>
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="index.js"></script>
+
+</head>
+<body onload="startjs()">
+    <div class="container">
+
+            <div class="jumbotron">
+                    <h1 class="display-4">Having a ball</h1>
+                    <p id="stagetext"> 
+P.S. my form will validate you so if a message pops out in this very area- take heed and comply                 
+                  </div>
+
+<div class="card bg-dark text-white">
+
+    <form name="ballCreate" id="ballC">
+
+            <div class="container">
+          
+        <input name="ballCalcul" id="ballCalcul" type="text" placeholder="Please enter a designated ball radius between 1-94" >
+        <!-- required -->
+        <span id="ballOutput"></span>
+        <div class="sep"></div>
+        <!-- <input type="button" name="btn" value="Start" onclick="to_start(toggle)";>
+<input type="button" name="btn" value="Stop" onclick="to_stop(toggle)";> -->
+        <!-- <button type="button" name="cleanCanvas" id="stopGen" class="btn btn-info">Generate Random</button> -->
+        <button type="button" name="subBut" id="submitBut" class="btn btn-success">Calculate ball radius</button>
+
+        <button type="button" name="cleanCanvas" id="cleanCanvas" class="btn btn-danger">Clear the Slate</button>
+
+        
+    </form>
+</div>
+<div class="sep"></div>
+
+<canvas id="myCanvas" width="800" height="800"></canvas>
+      
+    </div>
+ 
+</body>
+</html>

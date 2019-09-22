@@ -1,0 +1,61 @@
+  // calculate
+
+//  var volume;
+
+//  volume = (4/3) * Math.PI * Math.pow(radius, 3);
+//  volume = volume.toFixed(4);
+//  document.getElementById('volume').value = volume;
+//  return false;
+
+
+
+
+// var radius = document.getElementById('ballCalcul').value;
+
+// Math.abs
+
+// get the rad
+// const radValue = ballCalcul.value
+
+
+
+ if(isNaN(num1)){
+	document.write(num1 + " is not a number <br/>");
+ }else{
+	document.write(num1 + " is a number <br/>");
+ }
+ 
+
+
+
+// var toggle = ""
+
+//         function to_start(toggle){
+//         setInterval(() => {
+//    volume= Math.floor(Math.random() * 400) + 1 
+//    // console.log(volume)
+//    generate(volume)
+//  }, 100);
+        
+//         }
+        
+//         function to_stop(toggle){
+//         myCanvas.innerHTML = ""
+//         // clearInterval(toggle);
+        
+//         }
+
+
+// function stopGener(){
+//   clearInterval();
+// }
+
+// var interval = null;    
+
+// function startStuff(randomCircles, time) {
+//     interval = setInterval(func, time);
+// }
+
+// function stopStuff() {
+//     clearInterval(interval);
+// }
