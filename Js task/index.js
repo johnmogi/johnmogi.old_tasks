@@ -1,20 +1,4 @@
-// 0. library: defining the order of actions:
 
-// 1. Declaring the Elements from the DOM:
-// 2. passing a value from within a scope to further reuse:
-// 3. cleaning the canvas
-// 4. validating the form
-// 5. calculating the circle radius
-// 6. genereting the actual canvas circle after calculation
-
-// 1. Declaring the Elements from the DOM:
-
-
-// let isReady = document.readyState
-
-// if (isReady == true){ 
-
-function startjs(){ 
 const ballCreate = document.getElementById("ballCreate")
 const ballC = document.getElementById("ballC")
 const ballCalcul = document.getElementById("ballCalcul")
@@ -106,5 +90,4 @@ function generate(){
   context.strokeStyle = '#757374';
   context.stroke();
 
-}
 }
