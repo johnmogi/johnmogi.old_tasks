@@ -74,16 +74,19 @@
                     <label for="validationCustom02">Task Due Date</label>
 
                     <div class="input-group date" data-provide="datepicker">
-                        <input type="date" class="form-control" id="dueDate" placeholder="Due Date" value="" required>
+                        <input type="date" class="form-control" id="dueDate" placeholder="Due Date" value="" >
  <div class="input-group-addon">
                             <span class="glyphicon glyphicon-time"></span>
                         </div>
-                        <div class="invalid-feedback">
+                       
+                          <div class="invalid-feedback">
                             Must place task due date
                           </div>
+                           <!-- 
+                          using custom validation has it's toll...
                         <div class="valid-feedback">
                             Looks good!
-                          </div>
+                          </div> -->
                        
                     </div>
 
@@ -117,6 +120,12 @@
                   <div class="col">
                     <label for="validationCustom04">Task Details</label>
                     <textarea class="form-control" id="taskDetail" rows="3" required></textarea>                  
+                    <div class="invalid-feedback">
+                      You'll need to provide some details regarding the task at hand
+                    </div>
+                    <div class="valid-feedback">
+                       Awesome info!
+                      </div>
                   </div>
                
                 </div>

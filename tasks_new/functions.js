@@ -22,11 +22,31 @@
     
           // assign current date to date:
 var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+// var dd = String(today.getDate()).padStart(2, '0');
+var dd = today.getDate()
+// var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var mm = today.getMonth()+1
+
 var yyyy = today.getFullYear();
 
-today = mm + '/' + dd + '/' + yyyy;
+// today = mm + '/' + dd + '/' + yyyy;
+today = [dd,mm,yyyy]
+
 const taskCreationDate = (today);
 
 
+function timeValid(){
+ let datenow =  dueDate.value.split("-")
+ let  yearFromInput= parseInt(datenow[0])
+ let dayFromInput  = parseInt(datenow[2])
+ let monthFromInput = parseInt(datenow[1])
+
+//  console.log(yearFromInput, dayFromInput, monthFromInput)
+//  console.log(yyyy, dd, mm)
+ if (yearFromInput < yyyy || monthFromInput < mm ){
+  alert("please choose a future date")
+// didn't complete day validation... yet
+}
+// console.log(dayFromInput,yearFromInput,monthFromInput)
+
+}

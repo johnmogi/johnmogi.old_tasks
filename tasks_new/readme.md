@@ -13,3 +13,8 @@ https://glyphicons.bootstrapcheatsheets.com/#home
 
   </div>
 
+
+
+1. biggest issue is onload document- regarding global variables
+2. secondary issue is date validation
+3. adding multiple cards to dom

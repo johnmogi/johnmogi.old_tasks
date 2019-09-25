@@ -14,6 +14,10 @@ const timepicker5 = document.getElementById("timepicker5")
 const butonSub = document.getElementById("butonSub")
 
 
+//Implement:
+// status: completed, incomplete, deleted
+
+
 
 
 // window.addEventListener('load', function() {
