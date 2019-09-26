@@ -1,4 +1,17 @@
 butonSub.addEventListener("click", createNewCard)
+butonRes.addEventListener("click", clear)
+
+
+
+
+
+// stages to construct:
+
+// clear
+
+
+
+// draw
 
 //drawing in the dom
 function draw() {
@@ -32,6 +45,7 @@ function createNewCard(task) {
     
     if (!taskName || !dueDate || !task_description) return;
    
+    taskArray.push(new tasksConst(taskName.value, dueDate.value, task_description.value))
 
     console.log(stickyNoteDiv)
 

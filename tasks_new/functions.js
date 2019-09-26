@@ -34,19 +34,3 @@ today = [dd,mm,yyyy]
 
 const taskCreationDate = (today);
 
-
-function timeValid(){
- let datenow =  dueDate.value.split("-")
- let  yearFromInput= parseInt(datenow[0])
- let dayFromInput  = parseInt(datenow[2])
- let monthFromInput = parseInt(datenow[1])
-
-//  console.log(yearFromInput, dayFromInput, monthFromInput)
-//  console.log(yyyy, dd, mm)
- if (yearFromInput < yyyy || monthFromInput < mm ){
-  alert("please choose a future date")
-// didn't complete day validation... yet
-}
-// console.log(dayFromInput,yearFromInput,monthFromInput)
-
-}
