@@ -3,6 +3,10 @@
           (function() {
             'use strict';
             window.addEventListener('load', function() {
+
+            // window.addEventListener('load', validateBs)  
+            
+            // function validateBs(){ 
               // this.console.log("ready functions")
               // Fetch all the forms we want to apply custom Bootstrap validation styles to
               var forms = document.getElementsByClassName('needs-validation');
@@ -19,7 +23,7 @@
             }, false);
           })();
 
-    
+        // }
           // assign current date to date:
 var today = new Date();
 // var dd = String(today.getDate()).padStart(2, '0');

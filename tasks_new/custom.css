@@ -8,7 +8,10 @@ body{
 .container{
     background: #fff8
 }
-
-
+#stage{ min-height:300px;}
+#stage .card{
+    min-height:200px;
+    max-width: 18rem;
+}
 
 
