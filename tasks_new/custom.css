@@ -1,5 +1,6 @@
 body{
     background: url(./images/tile.jpg);
+    font-size: 125%;
     font-family: 'Roboto', arial, sans-serif;
 }
 .jumbotron h1 {
@@ -17,10 +18,11 @@ body{
 }
 
 .container{
-    background: #fff8
+    background: #fff5;
 }
 /* #stage{ min-height:300px;} */
 #stage .card{
+    overflow: auto;
     max-width: 18rem;
     min-height: 260px;
     background: url(images/notebg.png) 5% -10px;
@@ -30,7 +32,7 @@ body{
 }
 
 #headCard .card-body{ 
-    /* background: #ffffffd6; */
+    background: #ffffffbd;
 
 }
 .wrapper{
@@ -38,10 +40,11 @@ body{
 }
 
 #stage .card-body {
-    overflow: scroll;
+    background: #fff8;
+    overflow: inherit;
     max-width: 200px;
     max-height: 150px;
-    background: #ccc7;
+    /* background: #ccc7; */
     font-size: 1.5em;
     max-height: 200px;
 }

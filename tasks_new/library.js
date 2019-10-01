@@ -1,4 +1,4 @@
-const xbutton = '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+const delBut = document.getElementsByClassName("close")
 
 const taskArray = [];
 const returnedArray = [];

@@ -11,7 +11,7 @@ window.addEventListener("load", redraw)
 
 
 function buildTask(){
-    // if (taskName.value == ""){  return };
+    if (taskName.value == ""){  return };
     // validate();
     TASK_DOM = {
         id: parseInt(Math.floor(1000 + Math.random() * 9000)),
@@ -44,12 +44,21 @@ const div = document.createElement("div")
 stage.append(div)
 // div.className= ("card text-white bg-warning mb-3 col-4")
 div.className= ("card mb-3 col-4")
+const butX = document.createElement("button")
+butX.innerHTML = '<i class="glyphicon glyphicon-remove"></i>'
+
+butX.className= ("close")
+butX.id = ("but" + returnedArray[i].id)
+div.append(butX)
 
 const div2 = document.createElement("div")
 div.append(div2)
 div2.className= ("card-header")
 
-div2.innerHTML = (xbutton)
+// const xbutton = '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+
+// div2.innerHTML = (xbutton)
+
 // xbutton.addEventListener("click", alert(("yo")))
 // this.xbutton = returnedArray[i].id
 
@@ -74,11 +83,11 @@ function draw(){
 function redraw(){
     if (localStorage.length < 1){ return }
 
-    for(var i=1;i<localStorage.length -1; i++) {
+    for(var i=0;i<localStorage.length; i++) {
         var key = localStorage.key( i );
         var item = JSON.parse( localStorage.getItem( key ) );
-        if (item == "") {return}
-        returnedArray.push(item)
+        // if (item == "") {return}
+        // returnedArray.push(item)
       }
     draw()
 }

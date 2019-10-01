@@ -57,11 +57,18 @@ function timeValid(){
   }
 
 function validate(){
-   // if (taskName.value,dueDate.value == ""){
-       if (taskName.value === "" || taskDetail.value == "" ){ 
-       // e = false 
-       return
-       }
+
+   // validate that all inputs are filled
+   if (!taskName.value || !taskDetail.value ) {
+    alert("Please Fill All Inputs")
+    return;
+}
+
+  //  // if (taskName.value,dueDate.value == ""){
+  //      if (taskName.value === "" || taskDetail.value == "" ){ 
+  //      // e = false 
+  //      return
+  //      }
    timeValid()
 }
 
