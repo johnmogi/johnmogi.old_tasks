@@ -38,3 +38,30 @@ today = [dd,mm,yyyy]
 
 const taskCreationDate = (today);
 
+
+function clear() {
+  stage.innerHTML = ""
+   localStorage.clear();
+   taskArray.length = 0;
+   returnedArray.length = 0;
+}
+
+function timeValid(){
+   let datenow =  dueDate.value.split("-")
+   let  yearFromInput= parseInt(datenow[0])
+   // let dayFromInput  = parseInt(datenow[2])
+   let monthFromInput = parseInt(datenow[1])
+   if (yearFromInput < yyyy || monthFromInput < mm ){
+    alert("please choose a future date")
+  }
+  }
+
+function validate(){
+   // if (taskName.value,dueDate.value == ""){
+       if (taskName.value === "" || taskDetail.value == "" ){ 
+       // e = false 
+       return
+       }
+   timeValid()
+}
+

@@ -1,5 +1,16 @@
 body{
-    background: url(./images/tile.jpg)
+    background: url(./images/tile.jpg);
+    font-family: 'Roboto', arial, sans-serif;
+}
+.jumbotron h1 {
+    font-size: 25px;
+}
+.jumbotron {
+    padding: 1em;
+        padding-right: 1em;
+        padding-left: 1em;
+    text-align: center;
+    margin-bottom: 1.4em;
 }
 .space{
     height:25px;
@@ -8,10 +19,33 @@ body{
 .container{
     background: #fff8
 }
-#stage{ min-height:300px;}
+/* #stage{ min-height:300px;} */
 #stage .card{
-    min-height:200px;
     max-width: 18rem;
+    min-height: 260px;
+    background: url(images/notebg.png) 5% -10px;
+        background-color: rgba(0, 0, 0, 0);
+        background-repeat: repeat;
+    background-repeat: no-repeat;
 }
 
+#headCard .card-body{ 
+    /* background: #ffffffd6; */
 
+}
+.wrapper{
+    background: url(images/formbg.jpg);
+}
+
+#stage .card-body {
+    overflow: scroll;
+    max-width: 200px;
+    max-height: 150px;
+    background: #ccc7;
+    font-size: 1.5em;
+    max-height: 200px;
+}
+/* #stage {
+    direction: rtl;
+    float: left;
+} */

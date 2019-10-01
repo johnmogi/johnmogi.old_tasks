@@ -7,6 +7,7 @@ function clear() {
    stage.innerHTML = ""
     localStorage.clear();
     taskArray.length = 0;
+    returnedArray.length = 0;
 }
 
 function timeValid(){
@@ -48,6 +49,11 @@ function buildTask(){
         localStorage.setItem(JSON.stringify('Task'+taskArray[i].id), JSON.stringify(taskArray[i]));
         
     }
+
+    for (let j = 0; j < taskArray.length; j++) {
+        returnedArray.push(taskArray[j])
+    }
+    
     // localStorage.setItem(TASK_DOM.name, TASK_DOM.value );   
     // console.log(taskArray) 
 }
@@ -58,25 +64,46 @@ function draw(){
     validate()
     timeValid()
     buildTask()
+    generate()
 }
 
 function generate(){
     for (let i = 0; i < returnedArray.length; i++) {
         const div = document.createElement("div")
 stage.append(div)
-div.className = ("card text-white bg-warning mb-3")
-div.id ="headCard"
-const icon = '<i class="glyphicon glyphicon-cloud"></i>'
+div.className = ("card text-white bg-warning col-4")
 const div2 = document.createElement("div")
-headCard.append(div2)
-div2.className = ("card-body")
-div2.id ="bodycard"
-const h5 = document.createElement("h5")
-bodycard.append(h5)
-h5.className = ("card-title")
-h5.id ="titleCard"
-titleCard.innerHTML = (icon)
-titleCard.append(returnedArray[i].taskName)
+div.append(div2)
+div2.className = ("card-header")
+
+const icon = '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>'
+
+div2.innerHTML = (icon)
+
+const div3 = document.createElement("div")
+div3.className = ("card-body")
+div2.append(div3)
+// headCard.append(div2)
+
+const h3 = document.createElement("h3")
+div3.append(h3)
+h3.className = ("card-title")
+
+h3.append(returnedArray[i].taskName)
+
+const p = document.createElement("p")
+p.className = ("card-text")
+div3.append(p)
+
+p.append(returnedArray[i].taskDetail)
+const p2 = document.createElement("p")
+
+const icon2 = '<span class="glyphicon-class">glyphicon glyphicon-calendar</span>'
+p2.innerHTML = (icon2)
+p2.innerText = (returnedArray[i].id)
+
+
+
     }
 
 

@@ -1,4 +1,5 @@
-// butonSub completed incomplete all creator  taskName dueDate
+const xbutton = '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+
 const taskArray = [];
 const returnedArray = [];
 const completed = document.getElementById("completed")
@@ -7,26 +8,17 @@ const all = document.getElementById("all")
 
 
 const butonSub = document.getElementById("butonSub")
+const buttonClose = document.getElementsByClassName("close")
 
 
 let TASK_DOM = {}
+
 
 
 //Implement:
 // status: completed, incomplete, deleted
 
 
-
-// {/* <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-// <div class="card-header"><i class="glyphicon glyphicon-cloud"></i>Header</div>
-// <div class="card-body">
-//   <h5 class="card-title">Warning card title</h5>
-//   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-// </div>
-// </div> */}
-
-const div = document.createElement("div")
-div.className = ("card text-white bg-warning mb-3")
 
 
 // window.addEventListener('load', function() {
