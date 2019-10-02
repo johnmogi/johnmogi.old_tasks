@@ -3,23 +3,31 @@ butonSub.addEventListener("click", draw)
 butonRes.addEventListener("click", clear)
 // this.xbutton.addEventListener("click", deleteTask)
 
+
 window.addEventListener("load", redraw)
 
 // function deleteTask(){
 // parent.remove()
 // }
+function deleteTask(){
+    let delBut = document.getElementById(this.id)
+    console.log(delBut)
+    delBut.parentNode.parentNode.removeChild(delBut.parentNode);
+    deleteCard();
 
-
+}
+function deleteCard() {
+    // const i = findI(id);
+    // if (!id) return;
+    returnedArray.splice(1);
+    draw()
+}
 function buildTask(){
-    if (taskName.value == ""){  return };
-    // validate();
     TASK_DOM = {
         id: parseInt(Math.floor(1000 + Math.random() * 9000)),
-        // create_card_form: document.getElementById("creator"),
         taskName: document.getElementById("taskName").value,
         dueDate: document.getElementById("dueDate").value,
         taskDetail: document.getElementById("taskDetail").value,
-        // stage: document.getElementById("stage"),
         status: "active"
     }
 returnedArray.push(TASK_DOM)
@@ -46,7 +54,7 @@ stage.append(div)
 div.className= ("card mb-3 col-4")
 const butX = document.createElement("button")
 butX.innerHTML = '<i class="glyphicon glyphicon-remove"></i>'
-
+butX.addEventListener("click",deleteTask)
 butX.className= ("close")
 butX.id = ("but" + returnedArray[i].id)
 div.append(butX)
@@ -55,14 +63,6 @@ const div2 = document.createElement("div")
 div.append(div2)
 div2.className= ("card-header")
 
-// const xbutton = '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
-
-// div2.innerHTML = (xbutton)
-
-// xbutton.addEventListener("click", alert(("yo")))
-// this.xbutton = returnedArray[i].id
-
-// console.log(this.xbutton)
 div2.append(returnedArray[i].taskName)
 
 const div3 = document.createElement("div")
@@ -82,12 +82,12 @@ function draw(){
 }
 function redraw(){
     if (localStorage.length < 1){ return }
-
+    if (returnedArray.length > 1){ return }
     for(var i=0;i<localStorage.length; i++) {
         var key = localStorage.key( i );
         var item = JSON.parse( localStorage.getItem( key ) );
         // if (item == "") {return}
-        // returnedArray.push(item)
+        returnedArray.push(item)
       }
-    draw()
+      generate()
 }

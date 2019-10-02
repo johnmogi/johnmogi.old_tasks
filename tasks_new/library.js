@@ -1,5 +1,5 @@
 const delBut = document.getElementsByClassName("close")
-
+const messageBoard = document.getElementById("messageBoard")
 const taskArray = [];
 const returnedArray = [];
 const completed = document.getElementById("completed")

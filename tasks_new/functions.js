@@ -52,23 +52,19 @@ function timeValid(){
    // let dayFromInput  = parseInt(datenow[2])
    let monthFromInput = parseInt(datenow[1])
    if (yearFromInput < yyyy || monthFromInput < mm ){
-    alert("please choose a future date")
+    messageBoard.innerText = ("please choose a future date")
+    messageBoard.style.color = "red"
+    // alert("please choose a future date")
   }
   }
 
 function validate(){
-
-   // validate that all inputs are filled
    if (!taskName.value || !taskDetail.value ) {
-    alert("Please Fill All Inputs")
+    messageBoard.innerText = ("Please Fill All Inputs")
+    messageBoard.style.color = "red"
+    // alert("Please Fill All Inputs")
     return;
 }
-
-  //  // if (taskName.value,dueDate.value == ""){
-  //      if (taskName.value === "" || taskDetail.value == "" ){ 
-  //      // e = false 
-  //      return
-  //      }
    timeValid()
 }
 

@@ -16,7 +16,13 @@ body{
 .space{
     height:25px;
 }
+#stage{
+    padding-right: 3px;
+padding-left: 3px;
+margin-right: auto;
+margin-left: auto;
 
+}
 .container{
     background: #fff5;
 }
@@ -25,7 +31,7 @@ body{
     overflow: auto;
     max-width: 18rem;
     min-height: 260px;
-    background: url(images/notebg.png) 5% -10px;
+    background: url(images/notebg.png) 5% -5px;
         background-color: rgba(0, 0, 0, 0);
         background-repeat: repeat;
     background-repeat: no-repeat;
@@ -46,7 +52,27 @@ body{
     max-height: 150px;
     /* background: #ccc7; */
     font-size: 1.5em;
-    max-height: 200px;
+    max-height: 140px;
+}
+.glyphicon {
+    top: 3px;
+    right: 7px;
+}
+.glyphicon.glyphicon-remove {
+    float: right;
+    top: 15px;
+    left: 1px;
+}
+#dueDate {
+    padding: 0 5px;
+}
+.jumbotron, .card-header {
+    background-color: rgba(248, 249, 131, 0.73);
+    text-align: center;
+    font-size: 1.3em;
+}
+.col-4 {
+    min-width: 180px !important;
 }
 /* #stage {
     direction: rtl;
