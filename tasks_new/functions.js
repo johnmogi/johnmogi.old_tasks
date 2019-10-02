@@ -53,9 +53,15 @@ const taskCreationDate = (today);
 function timeValid(){
   let datenow =  dueDate.value.split("-")
   let  yearFromInput= parseInt(datenow[0])
-  // let dayFromInput  = parseInt(datenow[2])
+  let dayFromInput  = parseInt(datenow[2])
   let monthFromInput = parseInt(datenow[1])
-  if (yearFromInput < yyyy || monthFromInput < mm)  { 
+  if (yearFromInput < yyyy || 
+    monthFromInput < mm,
+    yearFromInput <= yyyy &&
+    monthFromInput < mm,
+    yearFromInput <= yyyy &&
+    monthFromInput <= mm &&
+    dayFromInput < dd) { 
 //    if (monthFromInput >= mm) { 
 //  {
   messageBoard.innerText = ("please choose a future date")
