@@ -1,5 +1,10 @@
-// bootstrap 4 standard validation:
-          // Example starter JavaScript for disabling form submissions if there are invalid fields
+function clear() {
+  stage.innerHTML = ""
+   localStorage.clear();
+   taskArray.length = 0;
+   returnedArray.length = 0;
+}
+
           (function() {
             'use strict';
             window.addEventListener('load', function() {
@@ -24,6 +29,9 @@
           })();
 
         // }
+
+
+
           // assign current date to date:
 var today = new Date();
 // var dd = String(today.getDate()).padStart(2, '0');
@@ -39,24 +47,42 @@ today = [dd,mm,yyyy]
 const taskCreationDate = (today);
 
 
-function clear() {
-  stage.innerHTML = ""
-   localStorage.clear();
-   taskArray.length = 0;
-   returnedArray.length = 0;
-}
+
+
 
 function timeValid(){
-   let datenow =  dueDate.value.split("-")
-   let  yearFromInput= parseInt(datenow[0])
-   // let dayFromInput  = parseInt(datenow[2])
-   let monthFromInput = parseInt(datenow[1])
-   if (yearFromInput < yyyy || monthFromInput < mm ){
-    messageBoard.innerText = ("please choose a future date")
+  let datenow =  dueDate.value.split("-")
+  let  yearFromInput= parseInt(datenow[0])
+  let dayFromInput  = parseInt(datenow[2])
+  let monthFromInput = parseInt(datenow[1])
+  if (yearFromInput < yyyy || 
+    monthFromInput < mm,
+    yearFromInput <= yyyy &&
+    monthFromInput < mm,
+    yearFromInput <= yyyy &&
+    monthFromInput <= mm &&
+    dayFromInput < dd) { 
+//    if (monthFromInput >= mm) { 
+//  {
+  messageBoard.innerText = ("please choose a future date")
     messageBoard.style.color = "red"
-    // alert("please choose a future date")
-  }
-  }
+  //  }
+ }
+ }
+
+
+
+// function timeValid(){
+//    let datenow =  dueDate.value.split("-")
+//    let  yearFromInput= parseInt(datenow[0])
+//    // let dayFromInput  = parseInt(datenow[2])
+//    let monthFromInput = parseInt(datenow[1])
+//    if (yearFromInput < yyyy || monthFromInput < mm ){
+//     messageBoard.innerText = ("please choose a future date")
+//     messageBoard.style.color = "red"
+//     // alert("please choose a future date")
+//   }
+//   }
 
 function validate(){
    if (!taskName.value || !taskDetail.value ) {
