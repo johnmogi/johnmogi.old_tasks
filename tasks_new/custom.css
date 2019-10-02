@@ -78,3 +78,9 @@ margin-left: auto;
     direction: rtl;
     float: left;
 } */
+.close{
+    opacity:0.5
+}
+.close:hover{
+opacity:1;
+}
