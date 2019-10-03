@@ -1,80 +1,118 @@
-body{
-    background: url(./images/tile.jpg);
-    font-size: 125%;
-    font-family: 'Roboto', arial, sans-serif;
+body {
+  background: url(./images/tile.jpg);
+  font-size: 125%;
+  font-family: "Roboto", arial, sans-serif;
 }
+
 .jumbotron h1 {
-    font-size: 25px;
+  font-size: 25px;
 }
+
 .jumbotron {
-    padding: 1em;
-        padding-right: 1em;
-        padding-left: 1em;
-    text-align: center;
-    margin-bottom: 1.4em;
-}
-.space{
-    height:25px;
-}
-#stage{
-    padding-right: 3px;
-padding-left: 3px;
-margin-right: auto;
-margin-left: auto;
-
-}
-.container{
-    background: #fff5;
-}
-/* #stage{ min-height:300px;} */
-#stage .card{
-    overflow: auto;
-    max-width: 18rem;
-    min-height: 260px;
-    background: url(images/notebg.png) 5% -5px;
-        background-color: rgba(0, 0, 0, 0);
-        background-repeat: repeat;
-    background-repeat: no-repeat;
+  padding: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  text-align: center;
+  margin-bottom: 1.4em;
 }
 
-#headCard .card-body{ 
-    background: #ffffffbd;
-
+.space {
+  height: 25px;
 }
-.wrapper{
-    background: url(images/formbg.jpg);
+
+#stage {
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {}
+
+#stage .card {
+  overflow: auto;
+  /* max-width: 18rem; */
+  min-height: 300px;
+  background: #ffffff42;
+  background: url(images/notebg.png) 5% -5px;
+
+  background-repeat: no-repeat;
+  /* background-size: 73.5%; */
+  background-position: 50%;
+}
+
+#headCard .card-body {
+  background: #ffffffbd;
+}
+
+.wrapper {
+  background: url(images/formbg.jpg);
 }
 
 #stage .card-body {
-    background: #fff8;
-    overflow: inherit;
-    max-width: 200px;
-    max-height: 150px;
-    /* background: #ccc7; */
-    font-size: 1.5em;
-    max-height: 140px;
+
+  overflow: inherit;
+  min-width: 150px;
+  max-height: 160px;
+  font-size: 1.5em;
+  margin: 10px 20%;
+  padding: 5px;
 }
-.glyphicon {
-    top: 3px;
-    right: 7px;
-}
-.glyphicon.glyphicon-remove {
-    float: right;
-    top: 15px;
-    left: 1px;
-}
+
 #dueDate {
-    padding: 0 5px;
+  padding: 0 5px;
 }
-.jumbotron, .card-header {
-    background-color: rgba(248, 249, 131, 0.73);
-    text-align: center;
-    font-size: 1.3em;
+
+.topArea .jumbotron,
+.topArea .card-header {
+  background-color: rgba(248, 249, 131, 0.73);
+  text-align: center;
+  font-size: 1.3em;
 }
-.col-4 {
-    min-width: 180px !important;
+
+.col-3 {
+  min-width: 180px !important;
 }
-/* #stage {
-    direction: rtl;
-    float: left;
-} */
+
+.far.fa-trash-alt {
+  float: right;
+
+  margin: 5px;
+
+  opacity: 0.5;
+
+  position: absolute;
+
+  top: 45px;
+
+  right: 60px;
+
+  font-size: 0.7em;
+
+  color: #f00;
+}
+
+.far.fa-trash-alt:hover {
+  opacity: 1;
+}
+
+#stage .card-header {
+  padding: 10px 35px 0;
+
+  line-height: 2em;
+
+  margin: 45px 0 0 0;
+
+  font-size: 0.9em;
+
+}
+
+.date-body {
+
+  background: #ffffffba;
+  border-radius: 0.5em;
+  text-align: center;
+  max-width: 200px;
+  padding: 0 10px;
+
+}
