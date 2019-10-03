@@ -1,0 +1,80 @@
+body{
+    background: url(./images/tile.jpg);
+    font-size: 125%;
+    font-family: 'Roboto', arial, sans-serif;
+}
+.jumbotron h1 {
+    font-size: 25px;
+}
+.jumbotron {
+    padding: 1em;
+        padding-right: 1em;
+        padding-left: 1em;
+    text-align: center;
+    margin-bottom: 1.4em;
+}
+.space{
+    height:25px;
+}
+#stage{
+    padding-right: 3px;
+padding-left: 3px;
+margin-right: auto;
+margin-left: auto;
+
+}
+.container{
+    background: #fff5;
+}
+/* #stage{ min-height:300px;} */
+#stage .card{
+    overflow: auto;
+    max-width: 18rem;
+    min-height: 260px;
+    background: url(images/notebg.png) 5% -5px;
+        background-color: rgba(0, 0, 0, 0);
+        background-repeat: repeat;
+    background-repeat: no-repeat;
+}
+
+#headCard .card-body{ 
+    background: #ffffffbd;
+
+}
+.wrapper{
+    background: url(images/formbg.jpg);
+}
+
+#stage .card-body {
+    background: #fff8;
+    overflow: inherit;
+    max-width: 200px;
+    max-height: 150px;
+    /* background: #ccc7; */
+    font-size: 1.5em;
+    max-height: 140px;
+}
+.glyphicon {
+    top: 3px;
+    right: 7px;
+}
+.glyphicon.glyphicon-remove {
+    float: right;
+    top: 15px;
+    left: 1px;
+}
+#dueDate {
+    padding: 0 5px;
+}
+.jumbotron, .card-header {
+    background-color: rgba(248, 249, 131, 0.73);
+    text-align: center;
+    font-size: 1.3em;
+}
+.col-4 {
+    min-width: 180px !important;
+}
+/* #stage {
+    direction: rtl;
+    float: left;
+} */

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Board App</title>
+    <link rel="stylesheet" href="./custom.css" >
+    <link href="./libs/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./libs/bootstrap4.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="./libs/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="./libs/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="./libs/bootstrap_4.0.0_js_bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+    <!-- <link rel="stylesheet" href="./libs/">
+    <script src="libs/"></script> -->
+
+
+
+
+ 
+
+</head>
+<body>
+    <div class="container">
+
+      <div class="row row-eq-height no-gutters ">
+        <div class="col-sm-4">
+         
+          <div class="space"></div>
+          
+          <div class="card border-info bg-light mb-3" >
+            <div class="card-header">Wellcome to MyTask - by filling out the form your'e able to create tasks...</div>
+            <div class="card-body">
+              <h5 class="card-title">fill out the following form</h5>
+              <div class="space"></div>
+              <p class="card-text">
+                don't forget to place the date</p>
+                <p class="card-text">
+                    You can also filter the stasks likewise:</p>
+      <button type="button" id="all" class="btn btn-outline-primary">All</button>
+      <button type="button" id="completed"  class="btn btn-outline-success">completed</button>
+      <button type="button" id="incomplete"  class="btn btn-outline-danger">Incomplete</button>
+    
+            </div>
+        </div>
+
+        </div>
+        <div class="col-sm-8">
+         
+              <div class="space"></div>
+              <div class="card border-success mb-3">
+                  <div class="card-header">When adding a task make sure to include all the info:</div>
+
+                  <div class="card-body">
+                      <div class="col">
+                          
+
+            <form class="needs-validation" novalidate class="border border-warning bg-dark" id="creator" name="taskManager">
+                <div class="form-row">
+                    <div class="col-md-6 mb-6">
+                    <label for="validationCustom01">Task Name</label>
+                    <input type="text" class="form-control" id="taskName" placeholder="Task Name" value="" required>
+                    <div class="invalid-feedback">
+                      Must Name Your Task
+                    </div>
+                    <div class="valid-feedback">
+                        Great Name!
+                      </div>
+                  </div>
+                  <div class="col-md-6 mb-6">
+                    <label for="validationCustom02">Task Due Date</label>
+
+                    <div class="input-group date" data-provide="datepicker">
+                        <input type="date" class="form-control" id="dueDate" placeholder="Due Date" value="" >
+ <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </div>
+                       
+                          <div class="invalid-feedback">
+                            Must place task due date
+                          </div>
+                           <!-- 
+                          using custom validation has it's toll...
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div> -->
+                       
+                    </div>
+
+                    <div class="space"></div>
+               
+                </div>
+          
+                    <div class="col">
+                      <label for="validationCustom03">Task Due Time</label>
+                      <div class="bootstrap-timepicker">
+                          <input id="timepicker5" type="text" class="form-control" value="current" data-provide="timepicker" data-defaultTime="current" placeholder="current" >
+                          <i class="icon-time"></i>
+                        
+                          <div class="invalid-feedback">
+                              Please provide a valid time.
+                            </div>
+                      </div>
+               <!-- in order to improve user interface have included this bit of jquery for auto time correction on input-->
+                      <script type="text/javascript">
+                          $('#timepicker5').timepicker({
+                              template: false,
+                              showInputs: false,
+                              minuteStep: 5
+                          });
+
+
+                      </script>
+
+
+                  </div>
+                  <div class="col">
+                    <label for="validationCustom04">Task Details</label>
+                    <textarea class="form-control" id="taskDetail" rows="3" required></textarea>                  
+                    <div class="invalid-feedback">
+                      You'll need to provide some details regarding the task at hand
+                    </div>
+                    <div class="valid-feedback">
+                       Awesome info!
+                      </div>
+                  </div>
+               
+                </div>
+                
+                </div>
+                <button class="btn btn-outline-success" id="butonSub"  type="submit" onclick="return false">Create Task</button>
+                <button class="btn btn-outline-danger" id="butonRes"  type="reset" >Clean up</button>
+                <!-- onclick="reset()" -->
+              </form>
+                  </div>
+                </div>
+          
+          </div>
+      
+        </div>
+  
+    
+
+       
+           <div id="stage">
+
+          
+
+           </div>
+       
+
+        
+
+
+      </div> <!--container-->
+    </div><!-- container-->
+<footer>
+<!-- The reason for which I have Placed scripts at footer:
+1. to avoid can't access lexical declaration - elements are constructed in html - if i access them before they are declared...
+2. it saves me the need to wait for body load, e.g.  window.addEventListener('load', function() -->
+    <script src="functions.js"></script>
+    <script src="tasks.js"></script>
+    <!-- <script src="template.js"></script> -->
+    <script src="library.js"></script>
+  </footer>
+</body>
+</html>
