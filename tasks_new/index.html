@@ -1,161 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Task Board Maker</title>
-  <link rel="icon"
-    href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/225/memo_1f4dd.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./custom.css">
-  <script src="elements.js"></script>
-  <script src="validate.js"></script>
-  <script src="task_application.js"></script>
-  <script src="https://kit.fontawesome.com/e5105e6c4a.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.js"></script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Board App</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+
+
+ 
+    <link rel="stylesheet" href="./custom.css" >
 </head>
-
 <body>
-  <div class="container">
-    <div class="row ">
-      <div class="col-sm-4 border-info topArea">
-        <div class="space"></div>
-        <div class="jumbotron card border-info bg-light mb-3">
-          <h1 class="display-3">📝MyTask organiser </h1>
-        </div>
-        <div class="card border-info bg-light mb-3">
-          <div class="card-header">Arrange tasks: </div>
-          <div class="card-body">
-            <button type="button" id="all" class="btn btn-outline-primary">All</button>
-            <button type="button" id="completed" class="btn btn-outline-success">completed</button>
-            <button type="button" id="incomplete" class="btn btn-outline-danger">Incomplete</button>
-          </div>
-        </div>
+    <div class="container">
 
-      </div>
-      <div class="col-sm-8">
-        <div class="space"></div>
-        <div class="card border-success mb-3 topArea" id="headCard">
-          <div class="card-header" id="messageBoard">When adding a task make sure to include all the info:</div>
-          <div class="wrapper">
+      <div class="row row-eq-height  ">
+        <div class="col-sm-4">
+         
+          <div class="space"></div>
+
+          <div class="jumbotron">
+              <h1 class="display-3">The Task Board</h1>
+          
+
+            </div>
+          
+          <div class="card border-info bg-light mb-3" >
+            <div class="card-header">Wellcome to MyTask - by filling out the form your'e able to create tasks...</div>
             <div class="card-body">
-              <div class="col">
+            
+              <h5 class="card-title">fill out the following form</h5>
+              <div class="space"></div>
+              <p class="card-text">
+                don't forget to place the date</p>
+                <p class="card-text">
+                    You can also filter the tasks likewise:</p>
+      <button type="button" id="all" class="btn btn-outline-primary">All</button>
+      <button type="button" id="completed"  class="btn btn-outline-success">completed</button>
+      <button type="button" id="incomplete"  class="btn btn-outline-danger">Incomplete</button>
+    </div>
+            </div>
+        
 
+        </div>
+        <div class="col-sm-8">
+         
+              <div class="space"></div>
+              <div class="card border-success mb-3" id="headCard">
+                  <div class="card-header" id="messageBoard">When adding a task make sure to include all the info:</div>
+                  <div class="wrapper">
+                  <div class="card-body">
+                      <div class="col">
+                          
 
-                <form class="needs-validation" novalidate class="border border-warning bg-dark" id="creator"
-                  name="taskManager">
-                  <div class="form-row">
+            <form class="needs-validation" novalidate class="border border-warning bg-dark" id="creator" name="taskManager">
+                <div class="form-row">
                     <div class="col-md-6 mb-6">
-                      <label for="validationCustom01">Task Name</label>
-                      <input type="text" class="form-control" id="taskName" placeholder="Task Name" value="" required>
-                      <div class="invalid-feedback">
-                        Must Name Your Task
-                      </div>
-                      <div class="valid-feedback">
+                    <label for="validationCustom01">Task Name</label>
+                    <input type="text" class="form-control" id="taskName" placeholder="Task Name" value="" required>
+                    <div class="invalid-feedback">
+                      Must Name Your Task
+                    </div>
+                    <div class="valid-feedback">
                         Great Name!
                       </div>
+                  </div>
+                  <div class="col-md-6 mb-6">
+                    <label for="validationCustom02">Task Due Date</label>
+
+                    <div class="input-group date" data-provide="datepicker">
+                        <input type="date" class="form-control" id="dueDate" placeholder="Due Date" value="" >
+ <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </div>
+                       
+                          <div class="invalid-feedback">
+                            Must place task due date
+                          </div>
+                           <!-- 
+                          using custom validation has it's toll...
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div> -->
+                       
                     </div>
-                    <div class="col-md-6 mb-6">
-                      <label for="validationCustom02">Task Due Date</label>
-
-                      <div class="input-group date" data-provide="datepicker">
-
-
-                        <input type="date" class="form-control" id="dueDate" placeholder="Due Date">
-                        <div class="input-group-addon">
-                          <i class="far fa-calendar-alt"></i>
-                        </div>
-                        <div id="vaildBypass" class="valid-feedback">
-                          Great, the date is good!
-                        </div>
-                        <div class="invalid-feedback">
-                          Must place task due date
-                        </div>
-                      </div>
-
-                      <div class="space"></div>
-                    </div>
-
+                  
+                    <div class="space"></div>
+                 
+                </div>
+          
                     <div class="col">
                       <label for="validationCustom03">Task Due Time</label>
                       <div class="bootstrap-timepicker">
-                        <input id="timepicker5" type="text" class="form-control " value="" data-provide="timepicker"
-                          data-defaultTime="current" placeholder="current">
-                        <i class="icon-time"></i>
-
-                        <div class="invalid-feedback">
-                          Please provide a valid time.
-                        </div>
+                          <input id="timepicker5" type="text" class="form-control" value="current" data-provide="timepicker" data-defaultTime="current" placeholder="current" >
+                          <i class="icon-time"></i>
+                        
+                          <div class="invalid-feedback">
+                              Please provide a valid time.
+                            </div>
                       </div>
-                      <!-- in order to improve user interface have included this bit of jquery for auto time correction on input-->
+               <!-- in order to improve user interface have included this bit of jquery for auto time correction on input-->
                       <script type="text/javascript">
-                        $('#timepicker5').timepicker({
-                          template: false,
-                          showInputs: false,
-                          minuteStep: 5
-                        });
+                          $('#timepicker5').timepicker({
+                              template: false,
+                              showInputs: false,
+                              minuteStep: 5
+                          });
+
+
                       </script>
 
 
-                    </div>
-                    <div class="col">
-                      <label for="validationCustom04">Task Details</label>
-                      <textarea class="form-control" id="taskDetail" rows="3" required></textarea>
-                      <div class="invalid-feedback">
-                        You'll need to provide some details regarding the task at hand
-                      </div>
-                      <div class="valid-feedback">
-                        Awesome info!
-                      </div>
-                    </div>
-
                   </div>
-
-              </div>
-              <button class="btn btn-outline-success" id="butonSub" type="submit" onclick="return false">Create
-                Task</button>
-              <button class="btn btn-outline-danger" id="butonRes" type="reset">Clean up</button>
-              <!-- onclick="reset()" -->
+                  <div class="col">
+                    <label for="validationCustom04">Task Details</label>
+                    <textarea class="form-control" id="taskDetail" rows="3" required></textarea>                  
+                    <div class="invalid-feedback">
+                      You'll need to provide some details regarding the task at hand
+                    </div>
+                    <div class="valid-feedback">
+                       Awesome info!
+                      </div>
+                  </div>
+               
+                </div>
+                
+                </div>
+                <button class="btn btn-outline-success" id="butonSub"  type="submit" onclick="return false">Create Task</button>
+                <button class="btn btn-outline-danger" id="butonRes"  type="reset" >Clean up</button>
+                <!-- onclick="reset()" -->
               </form>
-            </div>
+                  </div>
+                </div>
+          
           </div>
+      
         </div>
-      </div>
+  
+    
 
+        <div class="container">
+           <div id="stage" class="row">
+           
+              <!-- <div class="card text-white bg-warning mb-3 col-4" >
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+          -->
+         
 
+         
+                      
 
-      <div class="container">
+                                  
+                                                         
+           </div>
+           </div>
+       
 
-        <div id="stage" class="row">
+        
 
-        </div>
-      </div><!-- Main tasks area-->
-
-
+     
       <div class="space"></div>
+
     </div><!-- container-->
-  </div>
-  <!--container-->
-  <footer>
+  </div> <!--container-->
+<footer>
+<!-- The reason for which I have Placed scripts at footer:
+1. to avoid can't access lexical declaration - elements are constructed in html - if i access them before they are declared...
+2. it saves me the need to wait for body load, e.g.  window.addEventListener('load', function() -->
+<script src="library.js"></script>   
+<script src="functions.js"></script>
+    <script src="new_tasks.js"></script>
 
-
+    <!-- <script src="template.js"></script> -->
   </footer>
 </body>
-
 </html>
