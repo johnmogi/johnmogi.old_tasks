@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let TASK_DOM = {
-    id: "",
-    taskName: "",
-    dueDate: "",
-    taskDetail: "",
-    status: ""
+    // id: "",
+    // taskName: "",
+    // dueDate: "",
+    // taskDetail: "",
+    // status: ""
 }
 
 const delBut = document.getElementsByClassName("close")

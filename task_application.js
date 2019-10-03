@@ -15,7 +15,7 @@ function buildTask() {
     if (checkValid === false) {
         return
     }
-    for (let i = 0; i < returnedArray.length; i++) {
+    for (let i = -1; i < returnedArray.length; i++) {
         TASK_DOM = {
             // id: parseInt(Math.floor(100 + Math.random() * 900) + i),
             id: i + 10,
@@ -24,11 +24,10 @@ function buildTask() {
             Detail: document.getElementById("taskDetail").value,
             status: "active"
         }
+        // if (!TASK_DOM[i].id === ""){ returnedArray.splice(0) }
 
     }
-
-    returnedArray.push(TASK_DOM)
-    // taskArray.push(TASK_DOM)
+    returnedArray.push(TASK_DOM) 
 
     for (let i = 0; i < returnedArray.length; i++) {
         // localStorage.setItem(JSON.stringify(taskArray));

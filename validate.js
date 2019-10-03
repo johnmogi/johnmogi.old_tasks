@@ -71,6 +71,8 @@ function validate() {
     // alert("Please Fill All Inputs")
     checkValid = false
   } else {
+    messageBoard.innerText = ("...I'm Listening...")
+    messageBoard.style.color = "#000"
     creator.classList.add('needs-validation');
     checkValid = true
   }
