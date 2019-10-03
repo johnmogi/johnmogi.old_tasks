@@ -14,21 +14,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./custom.css">
-  <script src="elements.js"></script>
-  <script src="validate.js"></script>
-  <script src="task_application.js"></script>
   <script src="https://kit.fontawesome.com/e5105e6c4a.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.js"></script>
-
 </head>
 
 <body>
@@ -77,13 +63,11 @@
                       <div class="input-group date" data-provide="datepicker">
 
 
-                        <input type="date" class="form-control" id="dueDate" placeholder="Due Date">
+                        <input type="date" class="form-control" id="dueDate" placeholder="Due Date" value="">
                         <div class="input-group-addon">
                           <i class="far fa-calendar-alt"></i>
                         </div>
-                        <div id="vaildBypass" class="valid-feedback">
-                          Great, the date is good!
-                        </div>
+
                         <div class="invalid-feedback">
                           Must place task due date
                         </div>
@@ -95,8 +79,8 @@
                     <div class="col">
                       <label for="validationCustom03">Task Due Time</label>
                       <div class="bootstrap-timepicker">
-                        <input id="timepicker5" type="text" class="form-control " value="" data-provide="timepicker"
-                          data-defaultTime="current" placeholder="current">
+                        <input id="timepicker5" type="text" class="form-control" value="current"
+                          data-provide="timepicker" data-defaultTime="current" placeholder="current">
                         <i class="icon-time"></i>
 
                         <div class="invalid-feedback">
@@ -154,7 +138,19 @@
   <!--container-->
   <footer>
 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.js"></script>
+    <script src="elements.js"></script>
+    <script src="functions.js"></script>
+    <script src="task_application.js"></script>
   </footer>
 </body>
 
